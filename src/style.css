@@ -1,5 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
-
+@import url("https://fonts.googleapis.com/css2?family=Metamorphous&display=swap");
 
 * {
 	margin: 0;
@@ -26,9 +26,9 @@ h1 {
 }
 
 h1 span {
-	font-family: "PP Editorial Old", "PP Neue Montreal";
+	font-family: "Metamorphous", "PP Neue Montreal";
 	font-weight: 500;
-	font-style:italic;
+	font-style: italic;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -75,15 +75,15 @@ p {
 }
 
 .logo a {
-	text-transform:capitalize;
-	font-size:14px;
-	font-weight:bolder;
+	text-transform: capitalize;
+	font-size: 14px;
+	font-weight: bolder;
 }
 
 .nav-links {
-	display:flex;
-	gap:1.5em;
-justify-content:center;
+	display: flex;
+	gap: 1.5em;
+	justify-content: center;
 }
 
 .btn {
@@ -124,8 +124,8 @@ justify-content:center;
 	display: flex;
 	justify-content: flex-end;
 	background-color: white;
-	border-radius:4rem;
-	will-change:transform;
+	border-radius: 4rem;
+	will-change: transform;
 }
 
 .cta-label {
@@ -250,7 +250,7 @@ justify-content:center;
 }
 
 .count .digit h1 {
-	font-family: "PP Editorial Old", "PP Neue Montreal";
+	font-family: "Metamorphous", "PP Neue Montreal";
 	font-size: 15rem;
 	font-weight: 400;
 }
