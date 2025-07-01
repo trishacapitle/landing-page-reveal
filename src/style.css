@@ -1,96 +1,304 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	font-family: "PP Neue Montreal", sans-serif;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+	text-align: center;
+	color: var(--light);
+	font-size: 5rem;
+	font-weight: 500;
+	line-height: 1;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+h1 span {
+	font-family: "PP Editorial Old", "PP Neue Montreal";
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+a,
+p {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--light);
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1;
+	webkit-font-smoothing: antiliashed;
 }
 
-.card {
-  padding: 2em;
+.container {
+	position: relative;
+	width: 100vh;
+	height: 100svh;
+	overflow: hidden;
 }
 
-.read-the-docs {
-  color: #888;
+.hero-img {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	height: 100svh;
+	overflow: hidden;
+	z-index: -1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.nav {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	padding: 1.25em 1.5em;
+	display: flex;
+	align-items: center;
+	gap: 1.5em;
+	will-change: transform;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.nav > div {
+	flex: 1;
+}
+
+.logo a {
+	display: flex;
+	gap: 1.5em;
+	justify-content: center;
+}
+
+.btn {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.btn a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	width: 60px;
+	height: 40px;
+	color: black;
+	background-color: white;
+	border-radius: 40px;
+}
+
+.header {
+	width: 100%;
+	height: 100%;
+	padding-top: 25svh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5em;
+}
+
+.cta {
+	position: absolute;
+	left: 50%;
+	bottom: 3em;
+	transform: translateX(-50%);
+	width: 50%;
+	height: 60px;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: flex-end;
+	background-color: white;
+}
+
+.cta-label {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cta-label p {
+	color: black;
+}
+
+.cta-icon {
+	position: relative;
+	height: 100%;
+	aspect-ratio: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background-color: #303030;
+	border-radius: 60px;
+	will-change: transform;
+}
+
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100svh;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	heeight: 100%;
+	display: flex;
+}
+
+.block {
+	width: 100%;
+	height: 100%;
+	background-color: #303030;
+}
+
+.intro-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	gap: 0.25rem;
+}
+
+#wprd-1 {
+	position: relative;
+	left: -0.5rem;
+	padding-right: 0.25rem;
+}
+
+.word h1 {
+	font-size: 2.5rem;
+}
+
+.divider {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	transform-origin: center top;
+	width: 1px;
+	height: 100%;
+	background-color: white;
+}
+
+.spinner-container {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.spinner {
+	width: 50px;
+	height: 50px;
+	border: 1.4px solid white;
+	border-top-color: rgba(255, 255, 255, 0.125);
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.counter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+
+.count {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+}
+
+.digit {
+	flex: 1;
+	padding-top: 1rem;
+}
+
+.count .digit h1 {
+	font-family: "PP Editorial Old", "PP Neue Montreal";
+	font-size: 15rem;
+	font-weight: 400;
+}
+
+.nav {
+	transform: translateY(-120%);
+}
+
+.cta {
+	transform: translateX(-50%) scale(0);
+}
+
+.cta-icon {
+	transform: scale(0);
+}
+
+.line,
+.cta-label,
+.word,
+.count,
+.digit {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.line h1,
+.line p,
+.cta-label p,
+.count,
+.digit h1 {
+	position: relative;
+	transform: translateY(120%);
+	will-change: transform;
+}
+
+#word-1 {
+	transform: translateY(-120%);
+}
+
+#word-2 {
+	transform: translateY(120%);
+}
+
+.block {
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.divider {
+	transform: scaleY(0);
+}
+
+.hero-img {
+	transform: scale(1.5);
+	will-change: transform;
+}
+
+@media (max-width: 900px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	.nav-links {
+		display: none;
+	}
 }
