@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		tl.to(
 			digits,
 			{
-				y: "0%",
+				y: "-20%",
 				duration: 1,
 				stagger: 0.075,
 			},
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			tl.to(
 				digits,
 				{
-					y: "-100%",
+					y: "-120%",
 					duration: 1,
 					stagger: 0.075,
 				},
@@ -48,14 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	tl.to(
 		".word h1",
 		{
-			y: "0%",
+			y: "-20%",
 			duration: 1,
 		},
 		"<"
 	);
 
 	tl.to(".divider", {
-		scaleY: 1,
+		scaleY:"100%",
 		duration: 1,
 		onComplete: () =>
 			gsap.to(".divider", { opacity: 0, duration: 0.4, delay: 0.3 }),
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	);
 
 	tl.to(".block", {
-		clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+		clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
 		duration: 1,
 		stagger: 0.1,
 		delay: 0.75,
